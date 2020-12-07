@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="">
           <img src="./home.svg" alt=""/>
         </div>
-        <a href="boleto" className="">
+        <a href="contratacao" className="">
           
           <img src="./doc.svg" alt=""/>
         </a>
