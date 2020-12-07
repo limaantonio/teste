@@ -1,31 +1,29 @@
 import Link from 'next/link'
 
-const links = [
-  { href: 'https://github.com/vercel/next.js', label: 'GitHub' },
-  { href: 'https://nextjs.org/docs', label: 'Docs' },
-]
 
-export default function Nav() {
+const Nav = () => {
   return (
-    <nav>
-      <ul className="flex items-center justify-between p-8">
-        <li>
-          <Link href="/">
-            <a className="text-blue-500 no-underline text-accent-1 dark:text-blue-300">
-              Home
-            </a>
-          </Link>
-        </li>
-        <ul className="flex items-center justify-between space-x-4">
-          {links.map(({ href, label }) => (
-            <li key={`${href}${label}`}>
-              <a href={href} className="no-underline btn-blue">
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </ul>
-    </nav>
+    <div className="flex flex-col p-4 bg-blue">
+      <div className="flex flex-row ">
+        <div className="w-full">
+          <img src="./Barcode.svg" alt=""/>
+        </div>
+        <img src="./notification.svg" alt=""/>
+      </div>
+      <div className="space-y-4 mt-4">
+        <h1 className="text-white text-2xl">Olá, Joaquim</h1>
+        <p className="text-white text-sm ">Aqui você encontra as melhores ofertas baseado no seu score</p>
+      </div>
+      
+      <div className="flex flex-row space-x-4 mt-8">
+        <div className="bg-white flex flex-row space-x-2 p-2 w-full rounded-md">
+          <img className="" src="./Lupa.svg" alt=""/>
+          <input placeholder="Empréstimo, Título de capitalização,Consórcio" className="" type="text"/>
+        </div>
+        <img src="./definicoes.svg" alt=""/>
+      </div>
+    </div>
   )
 }
+
+export default Nav;
